@@ -1,3 +1,4 @@
+package editor;
 
 public class DocumentBoldCommand implements Command {
 

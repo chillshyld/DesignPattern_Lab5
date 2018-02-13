@@ -1,3 +1,4 @@
+package editor;
 public class TestEditor {
 	public static void main(String[] args) {
 	DocumentInvoker myDocument = new DocumentInvoker ("callmemaybe");

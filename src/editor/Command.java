@@ -1,3 +1,4 @@
+package editor;
 
 public interface Command {
 	public void undo();
