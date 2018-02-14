@@ -1,19 +1,39 @@
+package lab5_template;
+import java.io.*;
 
-public class ScrambledEggs {
-	public void crackEggs(int num) {
-		System.out.println("Cracking " + num + " eggs");
-	}
-	
+
+public class ScrambledEggs extends Egg {
+
 	public void stirEggs() {
 		System.out.println("Stirring and adding milk to the eggs");
 	}
 	
-	public void cooking() {
+	public void cook() {
 		System.out.println("Scrambling the eggs.");
 	}
-	
-	public void serve() {
-		System.out.println("Placing the eggs on the plate.");
-	}
+        
+       boolean customerWantSaltPepper() {
+            String answer = getUserInput();
+            if (answer.toLowerCase().startsWith("y")) {
+            return true;
+            } else {
+            return false;
+            }
+        }
+        
+        private String getUserInput() {
+            String answer = null;
+            System.out.print("Would you like salt and pepper with your scrambled egg (y/n)? ");
+            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            try {
+              answer = in.readLine();
+            } catch (IOException ioe) {
+              System.err.println("IO error trying to read your answer");
+            }
+            if (answer == null) {
+              return "no";
+            }
+              return answer;
+          }
 
 }
